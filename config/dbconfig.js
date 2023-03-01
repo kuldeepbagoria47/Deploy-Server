@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
-const {FormSchema} = require("../models/form");
+import mongoose from 'mongoose';
+import { FormSchema } from '../models/form.js';
+
 
 const mleweb = "mongodb+srv://admin:admin@cluster0.krcgcdm.mongodb.net/mleweb?retryWrites=true&w=majority"
 
@@ -9,5 +10,5 @@ const Cform = mongoose.createConnection(mleweb,{
 })
 
 
-const Mlewebdb = Cform.model('Mlewebdb', FormSchema);
-module.exports ={Mlewebdb};
+export const Mlewebdb = Cform.model('Mlewebdb', FormSchema);
+

@@ -1,11 +1,7 @@
-const express = require('express');
-const router = express.Router();
-const control = require("../services/controller")
+import { SubmitFormdata } from '../controller/controllers.js';
+import { Router as expressRouter  } from 'express';
 
+const router = expressRouter();
+router.post('/contactus',SubmitFormdata )
 
-router.get('/home', control.HelloWorld);
-router.post('/contactus', control.ContactUs)
-
-module.exports = {
-    routes: router
-}
+export default router;

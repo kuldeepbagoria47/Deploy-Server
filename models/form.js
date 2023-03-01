@@ -1,17 +1,16 @@
-const mongoose = require('mongoose');
-const schema = mongoose.Schema;
+import mongoose from 'mongoose';
+import { Schema } from 'mongoose';
 
 
-const FormSchema = new schema ({
+
+export const FormSchema = new Schema ({
     name:{
         type:String,
         required: false
     },
     email: {
         type: String,
-        required: true,
-    
-     
+        required: false,
     },
     phone:{
         type:String,
@@ -25,4 +24,3 @@ const FormSchema = new schema ({
 
 })
 
-exports.FormSchema = FormSchema;
