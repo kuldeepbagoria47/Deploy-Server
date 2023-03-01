@@ -3,6 +3,7 @@ const app = express();
 const cookieParser = require("cookie-parser");
 var bodyParser = require('body-parser');
 const cors = require("cors");
+const { routes } = require('./routes/router');
 
 // require("./DB_Config/dbConnection");
 
@@ -14,7 +15,7 @@ app.use(cookieParser());
 
 const port = 9090;
 
-const path = require('path')
+app.use(routes)
 
 
 app.listen(port, () => {
