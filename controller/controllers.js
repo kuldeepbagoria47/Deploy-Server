@@ -15,10 +15,7 @@ export const SubmitFormdata = async(req,res) =>{
         })
 
     } catch (e) {
-        // return res.status(500).json({
-        //     status: 500,
-        //     message:e.message
-        // })
+     
         next(e)
     }
 }
