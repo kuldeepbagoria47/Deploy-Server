@@ -9,15 +9,17 @@ export const SubmitFormdata = async(req,res) =>{
         await ContactUs(data)
 
          res.status(200).json({
+            success: true,
             status: 200,
             message:"data saved successfully"
         })
 
     } catch (e) {
-        return res.status(500).json({
-            status: 500,
-            message:e.message
-        })
+        // return res.status(500).json({
+        //     status: 500,
+        //     message:e.message
+        // })
+        next(e)
     }
 }
 
