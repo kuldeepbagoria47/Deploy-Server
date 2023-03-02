@@ -6,12 +6,12 @@ export const SubmitFormdata = async(req,res) =>{
     try {
         const data = req.body;
         console.log(data)
-      await ContactUs(data)
+        await ContactUs(data)
 
-       res.status(200).json({
-        status: 200,
-        message:"data saved successfully"
-       })
+         res.status(200).json({
+            status: 200,
+            message:"data saved successfully"
+        })
 
     } catch (e) {
         return res.status(500).json({
