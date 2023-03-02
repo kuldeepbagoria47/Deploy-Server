@@ -4,13 +4,12 @@ import { ContactUs } from '../services/contactform.js';
 export const SubmitFormdata = async(req,res) =>{
 
     try {
-        const {data} = req.body;
+        const data = req.body;
         console.log(data)
-       var result = await ContactUs(data)
+      await ContactUs(data)
 
        res.status(200).json({
         status: 200,
-        data:result,
         message:"data saved successfully"
        })
 
