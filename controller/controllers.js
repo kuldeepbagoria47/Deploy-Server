@@ -1,7 +1,7 @@
 
 import { ContactUs } from '../services/contactform.js';
 
-export const SubmitFormdata = async(req,res) =>{
+export const SubmitFormdata = async(req,res,next) =>{
 
     try {
         const data = req.body;
