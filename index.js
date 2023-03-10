@@ -17,6 +17,10 @@ app.use(cookieParser());
 app.use(ErrorHandler)
 app.use(router);
 
+// app.get('/*',(req,res)=>{
+//     app.use(express.static(path.resolve(__dirname,'CLIENT','dist')))
+//     res.sendFile(path.resolve(__dirname,'CLIENT','dist'))
+// })
 
 app.listen(process.env.PORT, () => {
     console.log(`server is running at port no ${process.env.PORT}`);
